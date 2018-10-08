@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    unsigned long long int m,n,i,j,count = 0;
+    scanf("%llu %llu",&m,&n);
+    unsigned long long int arr1[m],arr2[n],final[m*n];
+    for(i = 0;i < m;i++)
+    {
+        scanf("%llu",&arr1[i]);
+    }
+    for(j = 0;j < n;j++)
+    {
+        scanf("%llu",&arr2[j]);
+    }
+    
+    for(i = 0;i < m; i++)
+    {
+        for(j = 0;j < n; j++)
+        {
+            if(arr1[i] == arr2[j])
+            {
+                count = 1;
+                if(count == 1)
+                {
+                    
+                }
+            }
+        }
+        if (count == 0)
+            final[i] = arr1[i];
+    }
+    int length = sizeof(final)/sizeof(int);
+    printf("\{");
+    for(i = 0;i < length;i++)
+    {
+        printf("%llu",final[i]);
+        if(i<length-1)
+            printf("\,");
+    }
+    printf("\}");
+    
+    printf("%d",length);
+    return 0;
+}
